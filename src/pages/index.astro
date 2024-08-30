@@ -1,17 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+import CSS from "./Card.module.scss"
 ---
 
 <Layout title="Welcome to Astro.">
     <main>
-        <h1>Welcome to <span class="code">Astro 💙</span></h1>
+        <h1>Welcome to <span class="{CSS.code}">Astro 💙</span></h1>
         <p>
             To get started, open the directory <code>src/pages</code> in your project.<br
             />
             <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
             above.
         </p>
-     
+        <Card
+                 href="https://docs.astro.build/"
+                 title="Documentation"
+                 body="Learn how Astro works and explore the official API docs."
+        />
     </main>
 </Layout>
 
