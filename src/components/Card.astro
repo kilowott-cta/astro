@@ -7,7 +7,7 @@ interface Props {
 
 const { href, title, body } = Astro.props
 
-const { response } = await(await fetch(`api/naut`)).json()
+const { response } = await(await fetch(`/api/naut`)).json()
 
 import CSS from "./Card.module.scss"
 ---
