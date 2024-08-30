@@ -7,7 +7,8 @@ interface Props {
 
 const { href, title, body } = Astro.props
 
-const { response } = await(await fetch(`/api/naut`)).json()
+const response = await fetch(`${window.location.origin}/api/naut`)
+const data = await response.json();
 
 import CSS from "./Card.module.scss"
 ---
@@ -22,7 +23,7 @@ import CSS from "./Card.module.scss"
 			{body}
 		</p>
 	</a>
-	<div class={CSS.code}>{response}</div>
+	<div class={CSS.code}>{data.name}</div>
 </li>
 <style>
 	

@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^8.3.3",
     "astro": "^4.14.6",
     "azure-functions-core-tools": "^4.0.5907",
     "sass": "^1.77.8"

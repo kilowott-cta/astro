@@ -8,6 +8,7 @@ app.http('naut', {
 
         const name = request.query.get('name') || await request.text() || 'world';
 
-        return { body: `Hello, ${name}!` };
+        const content = JSON.stringify({ "name": `Hello, ${name}`})
+        return { body: content };
     }
 });
