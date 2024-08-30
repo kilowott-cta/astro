@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "astro": "^4.14.6",
+    "azure-functions-core-tools": "^4.0.5907",
     "sass": "^1.77.8"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^2.0.1"
   }
 }
