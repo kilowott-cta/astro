@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "@marplex/hono-azurefunc-adapter": "^1.0.0",
+    "hono": "^4.6.6"
   },
-  "devDependencies": {},
-  "main": "src/{index.js,functions/*.js}"
+  "main": "dist/src/{app.js,functions/*.js}"
 }
