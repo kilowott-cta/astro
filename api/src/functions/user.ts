@@ -7,9 +7,9 @@ async function getUser(request: HttpRequest, context: InvocationContext): Promis
 
     const mock = await fetch('https://randomuser.me/api/');
     const data = await mock.json();
-    user = data.results[0];
+    //user = data.results[0];
 
-    const response = new HttpResponse({ jsonBody: user });
+    const response = new HttpResponse({ jsonBody: data });
     response.headers.set('content-type', 'application/json');
     return response;
 };

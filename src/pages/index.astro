@@ -1,13 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import FooCard from "../components/FooCard.svelte";
 import UserCard from "../components/UserCard.svelte";
 ---
 
 <Layout title="Welcome to Astro.">
     <main>
         <h1>Welcome to <span>Astro 💙</span></h1>
-        <UserCard client:load />
+        <div class="flex">
+            <FooCard client:load />
+            <UserCard client:load />
+        </div>   
     </main>
+    <footer>
+        Copyright &copy; 2024
+    </footer>
 </Layout>
 
 <style>

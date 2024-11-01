@@ -5,7 +5,7 @@
 
     onMount(async() => {
         try {
-            const response = await fetch('/api/user');
+            const response = await fetch('https://randomuser.me/api/');
             const data = await response.json();
             user = data.results[0];
         } catch(error) {
