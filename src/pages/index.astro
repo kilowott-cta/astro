@@ -2,10 +2,24 @@
 import Layout from "../layouts/Layout.astro"
 import FooCard from "../components/FooCard.svelte";
 import UserCard from "../components/UserCard.svelte";
+import Hero from "fulldev-ui/blocks/Hero.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+    
     <main>
+        <Hero
+        badge="Astro Fulldev Badge"
+        heading="Astro Fulldev Heading"
+        text="This is a sample hero provided by the fulldev-ui blocks component"
+        buttons={[
+            { text: 'CTA 1', href: ''},
+            { text: 'CTA 2', href: ''}
+        ]}
+        image="/hero.jpg"
+        structure="split"
+        position="inset"
+        />
         <h1>Welcome to <span>Astro 💙</span></h1>
         <div class="flex">
             <FooCard client:load />
